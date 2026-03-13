@@ -392,7 +392,9 @@ img {
 }
 
 .store-badge-google {
-    height: 85px; /* Significantly larger height because the image asset has large built-in padding */
+    height: 75px; /* Adjusted height */
+    transform: scale(1.35); /* Scale up to bypass internal transparent padding */
+    transform-origin: center;
 }
 
 .hero-image {
