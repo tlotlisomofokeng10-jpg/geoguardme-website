@@ -165,7 +165,7 @@ img {
     backdrop-filter: blur(10px);
     z-index: 1000;
     transition: var(--transition);
-    padding: 1rem 0;
+    padding: 0.2rem 0;
     box-shadow: var(--shadow-sm);
 }
 
@@ -187,7 +187,7 @@ img {
 }
 
 .navbar .logo {
-    margin-left: 0; 
+    margin-left: 0;
 }
 
 .footer-brand .logo {
@@ -195,11 +195,14 @@ img {
 }
 
 .logo-img {
-    height: 125px; /* Large high-impact size from reference */
+    height: 280px;
+    /* Restored to a professional size */
     width: auto;
     display: block;
-    margin-top: -35px; /* Centers it vertically while letting it overlap */
-    margin-bottom: -35px;
+    position: relative;
+    top: -80px;
+    left: -150px;
+    margin-bottom: -150px;
 }
 
 .footer-brand .logo {
@@ -209,17 +212,32 @@ img {
 }
 
 .logo-footer {
-    height: 280px; /* Large size as shown in reference */
+    height: 280px;
     width: auto;
-    margin-bottom: 2rem;
-    margin-top: -85px; /* Pull up to perfectly align visual 'GeoGuardMe' text with headers */
-    background-color: transparent;
-    padding: 0;
-    border-radius: 0;
-    box-shadow: none;
     display: block;
-    filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.9));
+    margin-top: -60px;
+
+    /* ADD THESE TWO LINES: */
+    max-width: none;
+    /* Stops the column from squeezing the width */
+    object-fit: contain;
+    /* Final guard against distortion */
+
+    margin-bottom: 2rem;
+    position: relative;
+    top: -40px;
+    left: -80px;
+    /* Stacking shadows makes the center extremely bright while the edges stay soft */
+    filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 1))
+        /* Sharp bright core */
+        drop-shadow(0px 0px 30px rgba(255, 255, 255, 0.8))
+        /* Large soft glow */
+        drop-shadow(0px 0px 50px rgba(255, 255, 255, 0.4));
+    /* Massive outer aura */
+
 }
+
+
 
 .logo-text {
     font-size: 1.5rem;
@@ -726,7 +744,8 @@ img {
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Even columns for cleaner alignment */
+    grid-template-columns: repeat(4, 1fr);
+    /* Even columns for cleaner alignment */
     gap: 2rem;
     margin-bottom: 4rem;
     align-items: flex-start;
@@ -738,7 +757,10 @@ img {
 }
 
 .footer-brand p {
+    margin-top: -100px;
+    /* Use a negative number to pull the text UP towards the logo */
     margin-bottom: 2rem;
+    /* This keeps the space between the text and the icons below it */
 }
 
 .social-links {
@@ -766,7 +788,8 @@ img {
     color: var(--white);
     font-size: 1.25rem;
     margin-bottom: 1.5rem;
-    margin-top: 0; /* Align with top of grid container */
+    margin-top: 0;
+    /* Align with top of grid container */
 }
 
 .footer-links a {
@@ -893,7 +916,8 @@ img {
     margin-bottom: 0.25rem;
 }
 
-.method-details p, .method-details a {
+.method-details p,
+.method-details a {
     color: var(--text-secondary);
     font-size: 1rem;
 }
