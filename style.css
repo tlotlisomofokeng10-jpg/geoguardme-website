@@ -187,19 +187,17 @@ img {
 }
 
 .navbar .logo {
-    margin-left: -180px; /* Shifted top logo only */
+    margin-left: 0; 
 }
 
 .footer-brand .logo {
-    margin-left: -50px; /* Shifted bottom logo */
+    margin-left: 0;
 }
 
 .logo-img {
-    height: 65px; /* Base container height to keep navbar slim */
+    height: 65px; 
     width: auto;
     display: block;
-    transform: scale(4.0) translateX(0%); /* Large scale to pop out without affecting layout */
-    transform-origin: left center;
 }
 
 .logo-footer {
@@ -721,8 +719,9 @@ img {
 .footer-content {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 4rem;
+    gap: 3rem;
     margin-bottom: 4rem;
+    align-items: flex-start;
 }
 
 .footer-brand .logo-footer {
