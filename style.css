@@ -195,15 +195,15 @@ img {
 }
 
 .logo-img {
-    height: 180px; /* Increased base height for better visibility */
+    height: 65px; /* Base container height to keep navbar slim */
     width: auto;
     display: block;
-    transform: scale(1.5) translateX(0%); /* Smaller transform, larger base height for stability */
+    transform: scale(4.0) translateX(0%); /* Large scale to pop out without affecting layout */
     transform-origin: left center;
 }
 
 .logo-footer {
-    height: 120px; /* Increased footer logo size as well */
+    height: 250px; /* Significantly larger footer logo as requested */
     margin-bottom: 2rem;
     margin-top: 1rem;
     background-color: transparent;
