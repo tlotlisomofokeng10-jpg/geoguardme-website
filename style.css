@@ -201,9 +201,9 @@ img {
 }
 
 .logo-footer {
-    height: 250px; /* Significantly larger footer logo as requested */
+    height: 180px; /* Reduced height slightly to better balance with columns */
     margin-bottom: 2rem;
-    margin-top: 1rem;
+    margin-top: -10px; /* Slight negative margin to align with h4 headers visual top */
     background-color: transparent;
     padding: 0;
     border-radius: 0;
