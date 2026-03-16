@@ -1006,6 +1006,12 @@ textarea.form-control {
 }
 
 @media (max-width: 992px) {
+    .logo-img {
+        height: 180px;
+        top: -50px;
+        left: -100px;
+        margin-bottom: -100px;
+    }
 
     .nav-links,
     .nav-actions .btn {
@@ -1045,6 +1051,12 @@ textarea.form-control {
 }
 
 @media (max-width: 576px) {
+    .logo-img {
+        height: 140px;
+        top: -35px;
+        left: -80px;
+        margin-bottom: -80px;
+    }
     .hero h1 {
         font-size: 2.2rem;
     }
