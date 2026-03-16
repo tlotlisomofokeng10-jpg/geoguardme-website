@@ -1,30 +1,33 @@
 /* CSS Variables */
 :root {
     /* Colors - Blending SM Secure Corporate & Geo Guard Me Blues */
-    --primary: #0A2342; /* Deep Navy Blue */
-    --primary-light: #1A3E6B; 
-    --accent: #2196F3; /* Vibrant Blue for actions */
+    --primary: #0A2342;
+    /* Deep Navy Blue */
+    --primary-light: #1A3E6B;
+    --accent: #2196F3;
+    /* Vibrant Blue for actions */
     --accent-hover: #1976D2;
-    --dark: #0f1115; /* SM Secure Black */
+    --dark: #0f1115;
+    /* SM Secure Black */
     --darker: #08090b;
     --light: #F8F9FA;
     --white: #FFFFFF;
     --text-primary: #333333;
     --text-secondary: #666666;
     --text-light: #B0BEC5;
-    
+
     /* Typography */
     --font-family: 'Inter', sans-serif;
-    
+
     /* Spacing & Layout */
     --container-width: 1200px;
     --section-pad: 5rem 1rem;
-    
+
     /* Effects */
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    --shadow-sm: 0 4px 6px rgba(0,0,0,0.05);
-    --shadow-md: 0 10px 20px rgba(0,0,0,0.1);
-    --shadow-lg: 0 20px 40px rgba(0,0,0,0.2);
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 10px 20px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.2);
     --glass-bg: rgba(255, 255, 255, 0.05);
     --glass-border: rgba(255, 255, 255, 0.1);
     --border-radius: 12px;
@@ -183,9 +186,35 @@ img {
     gap: 0.75rem;
 }
 
+.navbar .logo {
+    margin-left: -180px; /* Shifted top logo only */
+}
+
+.footer-brand .logo {
+    margin-left: -50px; /* Shifted bottom logo */
+}
+
 .logo-img {
-    height: 40px;
-    border-radius: 8px; /* Depending on the logo shape */
+    height: 65px;
+    /* Base container height */
+    width: auto;
+    /* Moderate scale to fit comfortably without blowing up */
+    transform: scale(4.0) translateX(0%);
+    transform-origin: left center;
+    /* Scale outwardly to the right so it stays flush left */
+}
+
+.logo-footer {
+    height: 55px;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    background-color: transparent;
+    /* Removed the giant white circle */
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    /* Add a white outline glow around the letters so they are visible on dark background */
+    filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.9)) drop-shadow(0px 0px 2px rgba(255, 255, 255, 1));
 }
 
 .logo-text {
@@ -292,7 +321,8 @@ img {
     display: flex;
     align-items: center;
     background-color: var(--darker);
-    padding-top: 80px; /* Offset for navbar */
+    padding-top: 80px;
+    /* Offset for navbar */
     overflow: hidden;
 }
 
@@ -385,15 +415,18 @@ img {
 }
 
 .store-badge {
-    height: 55px; /* Adjust based on desired size */
+    height: 55px;
+    /* Adjust based on desired size */
     width: auto;
     border-radius: 8px;
     box-shadow: var(--shadow-sm);
 }
 
 .store-badge-google {
-    height: 75px; /* Adjusted height */
-    transform: scale(1.35); /* Scale up to bypass internal transparent padding */
+    height: 75px;
+    /* Adjusted height */
+    transform: scale(1.35);
+    /* Scale up to bypass internal transparent padding */
     transform-origin: center;
 }
 
@@ -416,14 +449,23 @@ img {
 .app-screenshot {
     width: 100%;
     height: auto;
-    border-radius: 30px; /* Inner radius */
+    border-radius: 30px;
+    /* Inner radius */
     display: block;
 }
 
 @keyframes floating {
-    0% { transform: translateY(0px) rotate3d(0, 1, 0, -5deg); }
-    50% { transform: translateY(-15px) rotate3d(0, 1, 0, -5deg); }
-    100% { transform: translateY(0px) rotate3d(0, 1, 0, -5deg); }
+    0% {
+        transform: translateY(0px) rotate3d(0, 1, 0, -5deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate3d(0, 1, 0, -5deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate3d(0, 1, 0, -5deg);
+    }
 }
 
 /* Device Mockup Structure */
@@ -432,10 +474,11 @@ img {
     background: #000;
     border-radius: 40px;
     padding: 12px;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 30px rgba(33, 150, 243, 0.2);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(33, 150, 243, 0.2);
     border: 2px solid #333;
     display: inline-block;
-    overflow: hidden; /* Ensure inner image borders curve perfectly */
+    overflow: hidden;
+    /* Ensure inner image borders curve perfectly */
 }
 
 /* The Notch */
@@ -514,6 +557,10 @@ img {
     transform: scale(1.1);
 }
 
+.step-card:hover .step-icon .fa-map-marker-alt {
+    animation: bounce-marker 1s ease infinite;
+}
+
 .step-card h3 {
     margin-bottom: 1rem;
     color: var(--primary);
@@ -557,7 +604,9 @@ img {
 
 .feature-item:hover {
     background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 5px 20px rgba(33, 150, 243, 0.15);
+    transform: translateY(-5px);
 }
 
 .feature-icon {
@@ -589,7 +638,8 @@ img {
 
 .screenshot-wrap {
     display: flex;
-    flex-direction: column; /* to handle titles below */
+    flex-direction: column;
+    /* to handle titles below */
     align-items: center;
 }
 
@@ -677,10 +727,9 @@ img {
     margin-bottom: 4rem;
 }
 
-.footer-brand .logo-text {
-    color: var(--white);
+.footer-brand .logo-footer {
     margin-bottom: 1rem;
-    display: inline-block;
+    display: block;
 }
 
 .footer-brand p {
@@ -737,6 +786,7 @@ img {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -744,56 +794,221 @@ img {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
+
+@keyframes bounce-marker {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Interactivity Classes */
+.magnetic-content {
+    display: inline-block;
+    transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Contact Page Styles */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    padding-top: 120px;
+    padding-bottom: 80px;
+}
+
+.contact-info h1 {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+}
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-method {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.method-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(33, 150, 243, 0.1);
+    color: var(--accent);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.method-details h3 {
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+}
+
+.method-details p, .method-details a {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+/* Contact Form */
+.contact-form-card {
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid #edf2f7;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+    outline: none;
+}
+
+.form-control:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(33, 150, 243, 0.1);
+}
+
+textarea.form-control {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: var(--accent);
+    color: var(--white);
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.4);
+}
+
+@media (max-width: 900px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
 
 /* Responsive Design */
 @media (max-width: 1024px) {
     .features-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .about-container {
         flex-direction: column;
     }
-    
+
     .about-stats {
         width: 100%;
     }
 }
 
 @media (max-width: 992px) {
-    .nav-links, .nav-actions .btn {
+
+    .nav-links,
+    .nav-actions .btn {
         display: none;
     }
-    
+
     .mobile-menu-btn {
         display: block;
     }
-    
+
     .hero-content {
         flex-direction: column;
         text-align: center;
         padding-top: 4rem;
     }
-    
+
     .hero h1 {
         font-size: 2.8rem;
     }
-    
+
     .hero p {
         margin: 0 auto 2.5rem;
     }
-    
+
     .hero-buttons {
         justify-content: center;
     }
-    
-    .steps-grid, .screenshots-grid {
+
+    .steps-grid,
+    .screenshots-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .footer-content {
         grid-template-columns: 1fr 1fr;
     }
@@ -803,15 +1018,15 @@ img {
     .hero h1 {
         font-size: 2.2rem;
     }
-    
+
     .hero-buttons {
         flex-direction: column;
     }
-    
+
     .footer-content {
         grid-template-columns: 1fr;
     }
-    
+
     .about-stats {
         grid-template-columns: 1fr;
     }

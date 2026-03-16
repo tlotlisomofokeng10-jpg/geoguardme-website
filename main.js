@@ -60,4 +60,21 @@ document.addEventListener('DOMContentLoaded', () => {
         el.style.transition = `all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) ${index * 0.1}s`;
         observer.observe(el);
     });
+
+    // Magnetic Hover Effect
+    const magneticElements = document.querySelectorAll('.magnetic-content');
+    
+    magneticElements.forEach((el) => {
+        el.addEventListener('mousemove', (e) => {
+            const position = el.getBoundingClientRect();
+            const x = e.clientX - position.left - position.width / 2;
+            const y = e.clientY - position.top - position.height / 2;
+            
+            el.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+        });
+
+        el.addEventListener('mouseout', () => {
+            el.style.transform = 'translate(0px, 0px)';
+        });
+    });
 });
