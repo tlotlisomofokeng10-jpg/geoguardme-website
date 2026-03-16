@@ -195,9 +195,11 @@ img {
 }
 
 .logo-img {
-    height: 60px; /* Restored to a professional, non-distorted size */
+    height: 125px; /* Large high-impact size from reference */
     width: auto;
     display: block;
+    margin-top: -35px; /* Centers it vertically while letting it overlap */
+    margin-bottom: -35px;
 }
 
 .footer-brand .logo {
@@ -207,10 +209,10 @@ img {
 }
 
 .logo-footer {
-    height: 240px; /* Significant size without pixelation/distortion */
+    height: 280px; /* Large size as shown in reference */
     width: auto;
-    margin-bottom: 1.5rem;
-    margin-top: -45px; /* Pull up to align visual center/top with headers */
+    margin-bottom: 2rem;
+    margin-top: -85px; /* Pull up to perfectly align visual 'GeoGuardMe' text with headers */
     background-color: transparent;
     padding: 0;
     border-radius: 0;
