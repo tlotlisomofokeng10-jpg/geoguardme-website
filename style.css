@@ -201,9 +201,9 @@ img {
 }
 
 .logo-footer {
-    height: 180px; /* Reduced height slightly to better balance with columns */
-    margin-bottom: 2rem;
-    margin-top: -10px; /* Slight negative margin to align with h4 headers visual top */
+    height: 320px; /* Major size increase as requested */
+    margin-bottom: 0rem; /* Reduced bottom margin to keep description close */
+    margin-top: -35px; /* Pulling up further to align visual top of logo with headers */
     background-color: transparent;
     padding: 0;
     border-radius: 0;
@@ -718,8 +718,8 @@ img {
 
 .footer-content {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 3rem;
+    grid-template-columns: repeat(4, 1fr); /* Even columns for cleaner alignment */
+    gap: 2rem;
     margin-bottom: 4rem;
     align-items: flex-start;
 }
