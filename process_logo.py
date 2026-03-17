@@ -33,6 +33,7 @@ def process_logo(input_path, output_dark, output_light):
     except Exception as e:
         print(f"Error: {e}")
 
+# Note: Directory paths still use "SM Specialized Security" to match the filesystem.
 process_logo("/Volumes/Untitled/whitelabel/SM Specialized Security/website/assets/1.png", 
              "/Volumes/Untitled/whitelabel/SM Specialized Security/website/assets/1_trim.png", 
              "/Volumes/Untitled/whitelabel/SM Specialized Security/website/assets/1_footer.png")
