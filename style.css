@@ -732,15 +732,20 @@ img {
     flex: 1;
 }
 
+.about-container {
+    color: var(--white); /* Force white text in this specific container */
+}
+
 .about-text h2 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
+    color: var(--white);
 }
 
 .about-text p {
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
-    color: var(--text-primary);
+    color: inherit; /* Allow .bg-gradient's white color to flow through */
 }
 
 .about-stats {
@@ -756,6 +761,11 @@ img {
     padding: 2rem;
     border-radius: var(--border-radius);
     text-align: center;
+}
+
+.stat-box p {
+    color: var(--white);
+    margin-bottom: 0;
 }
 
 .stat-box h3 {
