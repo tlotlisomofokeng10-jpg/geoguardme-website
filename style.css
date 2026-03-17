@@ -12,9 +12,17 @@
     --darker: #08090b;
     --light: #F8F9FA;
     --white: #FFFFFF;
+
+    /* Semantic Theme Variables - Light (Default) */
+    --bg-color: var(--light);
     --text-primary: #333333;
     --text-secondary: #666666;
     --text-light: #B0BEC5;
+    --navbar-bg: rgba(255, 255, 255, 0.95);
+    --card-bg: var(--white);
+    --border-color: rgba(0, 0, 0, 0.05);
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
 
     /* Typography */
     --font-family: 'Inter', sans-serif;
@@ -28,9 +36,22 @@
     --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
     --shadow-md: 0 10px 20px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.2);
-    --glass-bg: rgba(255, 255, 255, 0.05);
-    --glass-border: rgba(255, 255, 255, 0.1);
     --border-radius: 12px;
+}
+
+[data-theme="dark"] {
+    --bg-color: #0f1115;
+    --text-primary: #e6edf3;
+    --text-secondary: #8b949e;
+    --text-light: #7d8590;
+    --navbar-bg: rgba(15, 17, 21, 0.95);
+    --card-bg: #161b22;
+    --border-color: #30363d;
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --white: #e6edf3;
+    --primary: #58a6ff; /* Lighter blue for dark mode visibility */
+    --light: #161b22;
 }
 
 /* Base Styles */
@@ -47,9 +68,10 @@ html {
 body {
     font-family: var(--font-family);
     color: var(--text-primary);
-    background-color: var(--light);
+    background-color: var(--bg-color);
     line-height: 1.6;
     overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
@@ -161,10 +183,10 @@ img {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--navbar-bg);
     backdrop-filter: blur(10px);
     z-index: 1000;
-    transition: var(--transition);
+    transition: var(--transition), background-color 0.3s ease;
     padding: 0.2rem 0;
     box-shadow: var(--shadow-sm);
 }
@@ -246,6 +268,11 @@ img {
     letter-spacing: -0.5px;
 }
 
+[data-theme="dark"] .logo-img,
+[data-theme="dark"] .logo-footer {
+    filter: invert(1) hue-rotate(180deg) brightness(1.5);
+}
+
 .nav-links {
     display: flex;
     gap: 2rem;
@@ -287,8 +314,28 @@ img {
     background: none;
     border: none;
     font-size: 1.5rem;
-    color: var(--primary);
+    color: var(--text-primary);
     cursor: pointer;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    border-radius: 50%;
+}
+
+.theme-toggle-btn:hover {
+    background-color: var(--glass-border);
+    color: var(--accent);
 }
 
 /* Mobile Menu */
@@ -298,7 +345,7 @@ img {
     right: -100%;
     width: 300px;
     height: 100vh;
-    background-color: var(--white);
+    background-color: var(--bg-color);
     z-index: 2000;
     box-shadow: var(--shadow-lg);
     transition: var(--transition);
@@ -544,7 +591,7 @@ img {
 }
 
 .step-card {
-    background: var(--white);
+    background: var(--card-bg);
     padding: 3rem 2rem;
     border-radius: var(--border-radius);
     text-align: center;
@@ -552,6 +599,7 @@ img {
     transition: var(--transition);
     position: relative;
     z-index: 1;
+    border: 1px solid var(--border-color);
 }
 
 .step-card:hover {
@@ -692,7 +740,7 @@ img {
 .about-text p {
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--text-primary);
 }
 
 .about-stats {

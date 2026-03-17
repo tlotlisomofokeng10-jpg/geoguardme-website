@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,29 +15,36 @@
             max-width: 800px;
             margin: 0 auto;
         }
+
         .legal-content h1 {
             color: var(--primary);
             margin-bottom: 1rem;
         }
+
         .legal-content p.last-updated {
             color: var(--text-secondary);
             font-style: italic;
             margin-bottom: 2rem;
         }
+
         .legal-content h2 {
             color: var(--primary);
             margin-top: 2rem;
             margin-bottom: 1rem;
         }
-        .legal-content p, .legal-content li {
+
+        .legal-content p,
+        .legal-content li {
             color: var(--text-primary);
             margin-bottom: 1rem;
             line-height: 1.8;
         }
+
         .legal-content ul {
             padding-left: 1.5rem;
             margin-bottom: 1rem;
         }
+
         .disclaimer-box {
             background-color: rgba(33, 150, 243, 0.05);
             border-left: 4px solid var(--accent);
@@ -44,41 +52,49 @@
             margin: 2rem 0;
             border-radius: 0 8px 8px 0;
         }
+
         .disclaimer-box h3 {
             color: var(--primary);
             margin-bottom: 0.5rem;
         }
+
         .source-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1.5rem;
             margin-top: 2rem;
         }
+
         @media (max-width: 600px) {
             .source-grid {
                 grid-template-columns: 1fr;
             }
         }
+
         .source-item {
             padding: 1rem;
             border: 1px solid #eee;
             border-radius: 8px;
             transition: var(--transition);
         }
+
         .source-item:hover {
             box-shadow: var(--shadow-md);
             border-color: var(--accent);
         }
+
         .source-item a {
             color: var(--accent);
             font-weight: 500;
             text-decoration: none;
         }
+
         .source-item a:hover {
             text-decoration: underline;
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <header class="navbar">
@@ -86,7 +102,7 @@
             <a href="index.html" class="logo">
                 <img src="assets/1.png" alt="GeoGuardMe Logo" class="logo-img">
             </a>
-            
+
             <nav class="nav-links">
                 <a href="index.html#features">Features</a>
                 <a href="index.html#how-it-works">How it Works</a>
@@ -94,7 +110,11 @@
             </nav>
 
             <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
                 <a href="index.html#download" class="btn btn-primary">Download App</a>
+                <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
             </div>
         </div>
     </header>
@@ -102,34 +122,47 @@
     <!-- Data Sources Content -->
     <main class="legal-content container">
         <h1>Sources of Information</h1>
-        <p class="last-updated">Transparency and accuracy are core to our mission at GeoGuardMe. This page provides a comprehensive list of the official, publicly available government sources used to provide data within the application.</p>
+        <p class="last-updated">Transparency and accuracy are core to our mission at GeoGuardMe. This page provides a
+            comprehensive list of the official, publicly available government sources used to provide data within the
+            application.</p>
 
         <div class="disclaimer-box">
             <h3>Important Disclaimer</h3>
-            <p>GeoGuardMe is an independent application and does <strong>NOT</strong> represent any government entity. This app is not affiliated with, endorsed by, or officially connected with the South African government, the South African Police Service (SAPS), or any foreign government. All data is aggregated from the sources listed below for informational purposes only. While we strive for accuracy, we do not claim ownership or guarantee the correctness of the data, as it is dependent on the original public releases.</p>
+            <p>GeoGuardMe is an independent application and does <strong>NOT</strong> represent any government entity.
+                This app is not affiliated with, endorsed by, or officially connected with the South African government,
+                the South African Police Service (SAPS), or any foreign government. All data is aggregated from the
+                sources listed below for informational purposes only. While we strive for accuracy, we do not claim
+                ownership or guarantee the correctness of the data, as it is dependent on the original public releases.
+            </p>
         </div>
 
         <h2>Crime Statistics</h2>
-        <p>GeoGuardMe uses official crime data released by the South African Police Service to provide precinct-level statistics and historical trends.</p>
+        <p>GeoGuardMe uses official crime data released by the South African Police Service to provide precinct-level
+            statistics and historical trends.</p>
         <div class="source-item">
             <strong>South African Police Service (SAPS)</strong><br>
-            <a href="https://www.saps.gov.za/services/crimestats.php" target="_blank">https://www.saps.gov.za/services/crimestats.php</a>
+            <a href="https://www.saps.gov.za/services/crimestats.php"
+                target="_blank">https://www.saps.gov.za/services/crimestats.php</a>
         </div>
 
         <h2>Emergency Numbers</h2>
-        <p>Verified emergency contact information for various regions across South Africa is sourced from official government websites.</p>
+        <p>Verified emergency contact information for various regions across South Africa is sourced from official
+            government websites.</p>
         <div class="source-item">
             <strong>Western Cape Government</strong><br>
-            <a href="https://www.westerncape.gov.za/know-who-you-can-call-emergency" target="_blank">https://www.westerncape.gov.za/know-who-you-can-call-emergency</a>
+            <a href="https://www.westerncape.gov.za/know-who-you-can-call-emergency"
+                target="_blank">https://www.westerncape.gov.za/know-who-you-can-call-emergency</a>
         </div>
 
         <h2>Embassy & Consulate Information</h2>
-        <p>Foreign representation contact details are maintained using information from official government directories and embassy websites. Below are the primary sources for various representations in South Africa:</p>
-        
+        <p>Foreign representation contact details are maintained using information from official government directories
+            and embassy websites. Below are the primary sources for various representations in South Africa:</p>
+
         <div class="source-grid">
             <div class="source-item">
                 <strong>Angola</strong><br>
-                <a href="https://www.gov.za/about-government/contact-directory/foreign-reps/angola-republic-embassy" target="_blank">gov.za/.../angola-republic-embassy</a>
+                <a href="https://www.gov.za/about-government/contact-directory/foreign-reps/angola-republic-embassy"
+                    target="_blank">gov.za/.../angola-republic-embassy</a>
             </div>
             <div class="source-item">
                 <strong>Argentina</strong><br>
@@ -141,19 +174,23 @@
             </div>
             <div class="source-item">
                 <strong>Belgium</strong><br>
-                <a href="https://southafrica.diplomatie.belgium.be/en" target="_blank">southafrica.diplomatie.belgium.be/en</a>
+                <a href="https://southafrica.diplomatie.belgium.be/en"
+                    target="_blank">southafrica.diplomatie.belgium.be/en</a>
             </div>
             <div class="source-item">
                 <strong>Botswana</strong><br>
-                <a href="https://www.gov.za/about-government/contact-directory/foreign-reps/botswana-republic-high-commission" target="_blank">gov.za/.../botswana-republic-high-commission</a>
+                <a href="https://www.gov.za/about-government/contact-directory/foreign-reps/botswana-republic-high-commission"
+                    target="_blank">gov.za/.../botswana-republic-high-commission</a>
             </div>
             <div class="source-item">
                 <strong>Brazil</strong><br>
-                <a href="https://www.gov.br/mre/pt-br/embaixada-pretoria" target="_blank">gov.br/mre/pt-br/embaixada-pretoria</a>
+                <a href="https://www.gov.br/mre/pt-br/embaixada-pretoria"
+                    target="_blank">gov.br/mre/pt-br/embaixada-pretoria</a>
             </div>
             <div class="source-item">
                 <strong>Canada</strong><br>
-                <a href="https://www.international.gc.ca/country-pays/south_africa-afrique_sud/" target="_blank">international.gc.ca/.../south_africa-afrique_sud</a>
+                <a href="https://www.international.gc.ca/country-pays/south_africa-afrique_sud/"
+                    target="_blank">international.gc.ca/.../south_africa-afrique_sud</a>
             </div>
             <div class="source-item">
                 <strong>Chile</strong><br>
@@ -165,11 +202,13 @@
             </div>
             <div class="source-item">
                 <strong>Colombia</strong><br>
-                <a href="https://www.gov.za/about-government/contact-directory/foreign-reps/colombia-republic-embassy" target="_blank">pretoria.cancilleria.gov.co</a>
+                <a href="https://www.gov.za/about-government/contact-directory/foreign-reps/colombia-republic-embassy"
+                    target="_blank">pretoria.cancilleria.gov.co</a>
             </div>
             <div class="source-item">
                 <strong>Eswatini</strong><br>
-                <a href="https://www.gov.za/about-government/contact-directory/foreign-reps/eswatini-kingdom-high-commission" target="_blank">gov.za/.../eswatini-kingdom-high-commission</a>
+                <a href="https://www.gov.za/about-government/contact-directory/foreign-reps/eswatini-kingdom-high-commission"
+                    target="_blank">gov.za/.../eswatini-kingdom-high-commission</a>
             </div>
             <div class="source-item">
                 <strong>France</strong><br>
@@ -193,7 +232,8 @@
             </div>
             <div class="source-item">
                 <strong>Japan</strong><br>
-                <a href="https://www.za.emb-japan.go.jp/itprtop_en/index.html" target="_blank">za.emb-japan.go.jp/itprtop_en/index.html</a>
+                <a href="https://www.za.emb-japan.go.jp/itprtop_en/index.html"
+                    target="_blank">za.emb-japan.go.jp/itprtop_en/index.html</a>
             </div>
             <div class="source-item">
                 <strong>Kenya</strong><br>
@@ -201,19 +241,23 @@
             </div>
             <div class="source-item">
                 <strong>Lesotho</strong><br>
-                <a href="https://www.gov.ls/directory/high-commission-of-the-kingdom-of-lesotho-south-africa/" target="_blank">gov.ls/directory/.../lesotho-south-africa</a>
+                <a href="https://www.gov.ls/directory/high-commission-of-the-kingdom-of-lesotho-south-africa/"
+                    target="_blank">gov.ls/directory/.../lesotho-south-africa</a>
             </div>
             <div class="source-item">
                 <strong>Mozambique</strong><br>
-                <a href="https://www.gov.za/about-government/contact-directory/foreign-reps/mozambique-republic-high-commission" target="_blank">gov.za/.../mozambique-republic-high-commission</a>
+                <a href="https://www.gov.za/about-government/contact-directory/foreign-reps/mozambique-republic-high-commission"
+                    target="_blank">gov.za/.../mozambique-republic-high-commission</a>
             </div>
             <div class="source-item">
                 <strong>Namibia</strong><br>
-                <a href="https://www.gov.za/about-government/contact-directory/foreign-reps/namibia-republic-high-commission" target="_blank">gov.za/.../namibia-republic-high-commission</a>
+                <a href="https://www.gov.za/about-government/contact-directory/foreign-reps/namibia-republic-high-commission"
+                    target="_blank">gov.za/.../namibia-republic-high-commission</a>
             </div>
             <div class="source-item">
                 <strong>Netherlands</strong><br>
-                <a href="https://www.netherlandsandyou.nl/web/south-africa" target="_blank">netherlandsandyou.nl/web/south-africa</a>
+                <a href="https://www.netherlandsandyou.nl/web/south-africa"
+                    target="_blank">netherlandsandyou.nl/web/south-africa</a>
             </div>
             <div class="source-item">
                 <strong>Nigeria</strong><br>
@@ -221,11 +265,13 @@
             </div>
             <div class="source-item">
                 <strong>Pakistan</strong><br>
-                <a href="https://mofa.gov.pk/pretoria-south-africa/" target="_blank">mofa.gov.pk/pretoria-south-africa</a>
+                <a href="https://mofa.gov.pk/pretoria-south-africa/"
+                    target="_blank">mofa.gov.pk/pretoria-south-africa</a>
             </div>
             <div class="source-item">
                 <strong>Peru</strong><br>
-                <a href="https://www.gov.za/about-government/contact-directory/foreign-reps/peru-republic-embassy" target="_blank">gov.za/.../peru-republic-embassy</a>
+                <a href="https://www.gov.za/about-government/contact-directory/foreign-reps/peru-republic-embassy"
+                    target="_blank">gov.za/.../peru-republic-embassy</a>
             </div>
             <div class="source-item">
                 <strong>Qatar</strong><br>
@@ -237,11 +283,13 @@
             </div>
             <div class="source-item">
                 <strong>Saudi Arabia</strong><br>
-                <a href="https://www.gov.za/about-government/contact-directory/foreign-reps/saudi-arabia-kingdom-royal-embassy" target="_blank">overseas.mofa.go.kr/za-en/index.do</a>
+                <a href="https://www.gov.za/about-government/contact-directory/foreign-reps/saudi-arabia-kingdom-royal-embassy"
+                    target="_blank">overseas.mofa.go.kr/za-en/index.do</a>
             </div>
             <div class="source-item">
                 <strong>South Korea</strong><br>
-                <a href="https://overseas.mofa.go.kr/za-en/index.do" target="_blank">overseas.mofa.go.kr/za-en/index.do</a>
+                <a href="https://overseas.mofa.go.kr/za-en/index.do"
+                    target="_blank">overseas.mofa.go.kr/za-en/index.do</a>
             </div>
             <div class="source-item">
                 <strong>Switzerland</strong><br>
@@ -253,11 +301,13 @@
             </div>
             <div class="source-item">
                 <strong>UAE</strong><br>
-                <a href="https://www.mofa.gov.ae/en/missions/pretoria" target="_blank">mofa.gov.ae/en/missions/pretoria</a>
+                <a href="https://www.mofa.gov.ae/en/missions/pretoria"
+                    target="_blank">mofa.gov.ae/en/missions/pretoria</a>
             </div>
             <div class="source-item">
                 <strong>UK</strong><br>
-                <a href="https://www.gov.uk/world/organisations/british-high-commission-pretoria" target="_blank">gov.uk/.../british-high-commission-pretoria</a>
+                <a href="https://www.gov.uk/world/organisations/british-high-commission-pretoria"
+                    target="_blank">gov.uk/.../british-high-commission-pretoria</a>
             </div>
             <div class="source-item">
                 <strong>USA</strong><br>
@@ -265,11 +315,13 @@
             </div>
             <div class="source-item">
                 <strong>Zimbabwe</strong><br>
-                <a href="https://www.gov.za/about-government/contact-directory/foreign-reps/zimbabwe-republic-embassy" target="_blank">gov.za/.../zimbabwe-republic-embassy</a>
+                <a href="https://www.gov.za/about-government/contact-directory/foreign-reps/zimbabwe-republic-embassy"
+                    target="_blank">gov.za/.../zimbabwe-republic-embassy</a>
             </div>
         </div>
 
-        <p style="margin-top: 3rem; font-size: 0.9em; color: var(--text-secondary);">A product powered by Skeep Technologies (Pty) Ltd. &copy; 2026 GeoGuardMe. All rights reserved.</p>
+        <p style="margin-top: 3rem; font-size: 0.9em; color: var(--text-secondary);">A product powered by Skeep
+            Technologies (Pty) Ltd. &copy; 2026 GeoGuardMe. All rights reserved.</p>
     </main>
 
     <!-- Footer -->
@@ -277,7 +329,7 @@
         <div class="container footer-content">
             <div class="footer-brand">
                 <div class="logo">
-                     <img src="assets/1.png" alt="GeoGuardMe Logo" class="logo-footer">
+                    <img src="assets/1.png" alt="GeoGuardMe Logo" class="logo-footer">
                 </div>
                 <p>A white label product by Skeep Technologies in partnership with GeoGuardMe.</p>
                 <div class="social-links">
@@ -308,5 +360,7 @@
             <p>&copy; 2026 GeoGuardMe. All rights reserved.</p>
         </div>
     </footer>
+    <script src="main.js"></script>
 </body>
+
 </html>
