@@ -926,7 +926,7 @@ img {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: 4rem;
-    padding-top: 120px;
+    padding-top: 220px;
     padding-bottom: 80px;
 }
 
