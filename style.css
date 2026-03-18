@@ -253,6 +253,8 @@ img {
     height: 55px;
     width: auto;
     display: block;
+    /* Invisible on normal white navbar, but creates a protective glow when Samsung Stealth High Contrast forces the navbar dark */
+    filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 1)) drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.8));
 }
 
 .footer-brand .logo {
