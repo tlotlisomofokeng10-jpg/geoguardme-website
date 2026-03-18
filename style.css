@@ -40,21 +40,19 @@
     color-scheme: light dark;
 }
 
-/* High Contrast Mode Adjustments */
-@media (prefers-contrast: more), (forced-colors: active) {
-    /* Graceful degradation for hero gradient text */
-    .hero h1 {
-        background: none !important;
-        -webkit-text-fill-color: initial !important;
-        color: var(--white) !important;
-    }
-
-    /* Prevent Samsung Internet from turning drop-shadows and filters into solid blocky backgrounds */
-    .logo-img,
-    .logo-footer {
+/* High Contrast & Dark Mode Logo Asset Swap */
+@media (prefers-color-scheme: dark), (prefers-contrast: more), (forced-colors: active) {
+    .logo-img, .logo-footer {
+        content: url("assets/1_footer.png");
         filter: none !important;
-        box-shadow: none !important;
     }
+}
+
+/* Explicit fallback for the manual Dark Mode toggle */
+[data-theme="dark"] .logo-img,
+[data-theme="dark"] .logo-footer {
+    content: url("assets/1_footer.png");
+    filter: none !important;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -252,14 +250,9 @@ img {
 }
 
 .logo-img {
-    height: 280px;
-    /* Restored to a professional size */
+    height: 55px;
     width: auto;
     display: block;
-    position: relative;
-    top: -80px;
-    left: -150px;
-    margin-bottom: -150px;
 }
 
 .footer-brand .logo {
@@ -269,29 +262,14 @@ img {
 }
 
 .logo-footer {
-    height: 280px;
+    height: 60px;
     width: auto;
     display: block;
-    margin-top: -60px;
-
-    /* ADD THESE TWO LINES: */
-    max-width: none;
-    /* Stops the column from squeezing the width */
-    object-fit: contain;
-    /* Final guard against distortion */
-
     margin-bottom: 2rem;
-    position: relative;
-    top: -40px;
-    left: -80px;
-    /* Stacking shadows makes the center extremely bright while the edges stay soft */
+    object-fit: contain;
     filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 1))
-        /* Sharp bright core */
         drop-shadow(0px 0px 30px rgba(255, 255, 255, 0.8))
-        /* Large soft glow */
         drop-shadow(0px 0px 50px rgba(255, 255, 255, 0.4));
-    /* Massive outer aura */
-
 }
 
 
@@ -303,10 +281,7 @@ img {
     letter-spacing: -0.5px;
 }
 
-[data-theme="dark"] .logo-img,
-[data-theme="dark"] .logo-footer {
-    filter: invert(1) hue-rotate(180deg) brightness(1.5);
-}
+
 
 .nav-links {
     display: flex;
@@ -490,11 +465,7 @@ img {
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 1.5rem;
-    background: linear-gradient(to right, #ffffff, #b0bec5);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: var(--white); /* Fallback for when background-clip: text is ignored */
+    color: var(--white);
 }
 
 
@@ -852,10 +823,8 @@ img {
 }
 
 .footer-brand p {
-    margin-top: -100px;
-    /* Use a negative number to pull the text UP towards the logo */
+    margin-top: 1rem;
     margin-bottom: 2rem;
-    /* This keeps the space between the text and the icons below it */
 }
 
 .social-links {
@@ -1101,12 +1070,7 @@ textarea.form-control {
 }
 
 @media (max-width: 992px) {
-    .logo-img {
-        height: 200px;
-        top: -35px;
-        left: -20px;
-        margin-bottom: -100px;
-    }
+    /* logo naturally sized */
 
     .nav-links,
     .nav-actions .btn {
@@ -1147,10 +1111,7 @@ textarea.form-control {
 
 @media (max-width: 576px) {
     .logo-img {
-        height: 180px;
-        top: -35px;
-        left: -20px;
-        margin-bottom: -80px;
+        height: 45px;
     }
 
     .hero h1 {
