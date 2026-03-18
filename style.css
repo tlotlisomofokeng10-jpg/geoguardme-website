@@ -38,7 +38,12 @@
     --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.2);
     --border-radius: 12px;
     color-scheme: light dark;
-    forced-color-adjust: none;
+}
+
+/* Aggressive High Contrast Mode Fix */
+* {
+    forced-color-adjust: none !important;
+    -webkit-forced-color-adjust: none !important;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -478,6 +483,14 @@ img {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    color: var(--white); /* Fallback for when background-clip: text is ignored */
+}
+
+@media (forced-colors: active) {
+    .hero h1 {
+        color: CanvasText !important;
+        -webkit-text-fill-color: CanvasText !important;
+    }
 }
 
 .hero p {
