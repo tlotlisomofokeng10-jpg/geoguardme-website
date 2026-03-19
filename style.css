@@ -42,7 +42,8 @@
 
 /* High Contrast & Dark Mode Logo Asset Swap */
 @media (prefers-color-scheme: dark), (prefers-contrast: more), (forced-colors: active) {
-    .logo-img, .logo-footer {
+    :root:not([data-theme="light"]) .logo-img,
+    :root:not([data-theme="light"]) .logo-footer {
         content: url("assets/1_footer.png");
         filter: none !important;
     }
