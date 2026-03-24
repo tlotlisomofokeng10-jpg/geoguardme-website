@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Coming Soon - GeoGuardMe</title>
+    <meta name="description" content="GeoGuardMe is launching soon. Get ready for real-time safety alerts and crime statistics in South Africa.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=1.1">
+    <link rel="icon" type="image/png" href="assets/2.png">
+    <style>
+        .coming-soon-hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .coming-soon-hero::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--primary));
+            filter: blur(100px);
+            opacity: 0.2;
+            z-index: 0;
+        }
+
+        .coming-soon-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .coming-soon-content .logo {
+            margin: 0 auto 3rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .coming-soon-content .logo-img {
+            height: 80px;
+            width: auto;
+        }
+
+        .coming-soon-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, var(--white), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .coming-soon-content p {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .construction-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: rgba(33, 150, 243, 0.1);
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .back-home {
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .coming-soon-content h1 {
+                font-size: 2.5rem;
+            }
+            .coming-soon-content p {
+                font-size: 1.1rem;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="coming-soon-hero">
+        <div class="coming-soon-content">
+            <a href="index.html" class="logo">
+                <img src="assets/1_trim.png" alt="GeoGuardMe Logo" class="logo-img">
+            </a>
+            
+            <div class="construction-badge">Under Construction</div>
+            
+            <h1>Building Your Personal Safety Companion</h1>
+            
+            <p>We are hard at work putting the final touches on the GeoGuardMe app. Our team is making sure every alert is precise and every feature is ready to help you explore South Africa with confidence.</p>
+            
+            <div class="hero-buttons" style="justify-content: center;">
+                <div class="badge" style="background: rgba(255,255,255,0.05); color: var(--white); border-color: rgba(255,255,255,0.1);">
+                    Launching Soon on App Store & Google Play
+                </div>
+            </div>
+
+            <div class="legal-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-and-conditions.html">Terms & Conditions</a>
+                <a href="data-sources.html">Data Sources</a>
+                <a href="delete-account.html">Delete Account</a>
+            </div>
+
+            <div class="back-home">
+                <a href="index.html" class="btn btn-outline">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Theme Toggle Script (Simple version if main.js is too heavy) -->
+    <script>
+        // Simple dark mode support
+        const theme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+    </script>
+</body>
+
+</html>

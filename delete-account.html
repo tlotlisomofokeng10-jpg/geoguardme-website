@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Delete Account - GeoGuardMe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=1.1">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/2.png">
+    <style>
+        .delete-container {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            padding-top: 220px;
+            padding-bottom: 80px;
+        }
+
+        .delete-info h1 {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .delete-info p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .warning-box {
+            background: rgba(239, 68, 68, 0.1);
+            border-left: 4px solid #ef4444;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .warning-box h3 {
+            color: #ef4444;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .warning-box p {
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        .delete-form-card {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .checkbox-group input {
+            margin-top: 0.3rem;
+        }
+
+        .checkbox-group label {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        .btn-delete {
+            background-color: #ef4444;
+        }
+
+        .btn-delete:hover {
+            background-color: #dc2626;
+            box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+        }
+
+        @media (max-width: 900px) {
+            .delete-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/1_trim.png" alt="GeoGuardMe Logo" class="logo-img">
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html#features">Features</a>
+                <a href="index.html#how-it-works">How it Works</a>
+                <a href="index.html#about">About Us</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="coming-soon.html" class="btn btn-primary">Download App</a>
+                <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="delete-container">
+            <div class="delete-info">
+                <h1>Delete Account</h1>
+                <p>We're sorry to see you go. If you'd like to delete your GeoGuardMe account and all associated data, please fill out the form below.</p>
+                
+                <div class="warning-box">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Permanent Action</h3>
+                    <p>Account deletion is permanent and cannot be undone. Once processed, your GeoGuardMe profile, premium safety passes, and subscription access will be permanently removed. To help keep other travelers safe, any incident reports you have submitted will remain on the map but will be completely anonymized. You will lose all access to Guard Mode and real-time audio alerts immediately.</p>
+                </div>
+
+                <p>According to Google Play Store and Apple App Store policies, you have the right to request the deletion of your account and all personal data associated with it.</p>
+            </div>
+
+            <div class="delete-form-card">
+                <form id="deleteAccountForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="John Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="john@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reason">Reason for deletion (Optional)</label>
+                        <textarea id="reason" name="reason" class="form-control" placeholder="Please let us know why you're leaving..."></textarea>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="confirmDelete" name="confirmDelete" required>
+                        <label for="confirmDelete">I understand that my account and all associated data will be permanently deleted and cannot be recovered.</label>
+                    </div>
+
+                    <button type="submit" class="submit-btn btn-delete">Request Account Deletion</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <img src="assets/1_trim.png" alt="GeoGuardMe Logo" class="logo-footer">
+                </div>
+                <p>A white label product by Skeep Technologies in partnership with GeoGuardMe Academy.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Safety</h4>
+                <a href="index.html#features">Features</a>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <a href="index.html#about">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="https://smsecure.co.za/">GeoGuardMe Academy</a>
+            </div>
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-and-conditions.html">Terms & Conditions</a>
+                <a href="data-sources.html">Data Sources</a>
+                <a href="delete-account.html">Delete Account</a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 GeoGuardMe. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="main.js?v=1.1"></script>
+    <script>
+        document.getElementById('deleteAccountForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Your request for account deletion has been received. Our team will verify your identity via email before permanently deleting your data.');
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>
