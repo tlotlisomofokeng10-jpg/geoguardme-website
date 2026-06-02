@@ -117,16 +117,25 @@
                 <img src="assets/1_trim.png" alt="GeoGuardMe Logo" class="logo-img">
             </a>
             
-            <div class="construction-badge">Under Construction</div>
+            <div class="construction-badge" style="border-color: var(--accent); color: var(--accent); background: rgba(33, 150, 243, 0.1);">Now Live</div>
             
-            <h1>Building Your Personal Safety Companion</h1>
+            <h1>Your Personal Safety Companion</h1>
             
-            <p>We are hard at work putting the final touches on the GeoGuardMe app. Our team is making sure every alert is precise and every feature is ready to help you explore South Africa with confidence.</p>
+            <p>The official GeoGuardMe app is now available for download. Get real-time crime statistics, safety notifications, and verified incident alerts right on your phone to explore South Africa with confidence.</p>
             
-            <div class="hero-buttons" style="justify-content: center;">
-                <div class="badge" style="background: rgba(255,255,255,0.05); color: var(--white); border-color: rgba(255,255,255,0.1);">
-                    Launching Soon on App Store & Google Play
-                </div>
+            <div class="hero-buttons" style="justify-content: center; margin-bottom: 3rem;">
+                <a href="https://apps.apple.com/za/app/geoguardme/id6760608183" target="_blank" rel="noopener" class="store-badge-link">
+                    <span class="magnetic-content inline-block transition-transform duration-200 ease-out">
+                        <img src="assets/app-store-badge.svg" alt="Download on the App Store"
+                            style="height: 48px; width: auto;">
+                    </span>
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.skeeptechnologies.smspecializedsecurity" target="_blank" rel="noopener" class="store-badge-link">
+                    <span class="magnetic-content inline-block transition-transform duration-200 ease-out">
+                        <img src="assets/google-play-badge.png" alt="Get it on Google Play"
+                            style="height: 68px; width: auto;">
+                    </span>
+                </a>
             </div>
 
             <div class="legal-links">
@@ -144,12 +153,13 @@
         </div>
     </section>
 
-    <!-- Theme Toggle Script (Simple version if main.js is too heavy) -->
+    <!-- Theme Toggle & Interaction Script -->
     <script>
         // Simple dark mode support
         const theme = localStorage.getItem('theme') || 'light';
         document.documentElement.setAttribute('data-theme', theme);
     </script>
+    <script src="main.js?v=1.1"></script>
 </body>
 
 </html>
